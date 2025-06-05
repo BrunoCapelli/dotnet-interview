@@ -91,16 +91,8 @@ namespace TodoApi.Controllers
         [HttpDelete]
         public async Task<ActionResult> DeleteTodoListItem(DeleteTodoListItem payload)
         {
-            var todoList = await _context.TodoList
-                .Include(t => t.Items)
-                .FirstOrDefaultAsync(t => t.Id == payload.TodoListId);
 
-            if(todoList == null) 
-            {
-                return NotFound(); 
-            }
-
-            var item = todoList.Items.FirstOrDefault(i => i.Id == payload.ItemId);
+            var item = await _context.Items.FindAsync(payload.ItemId);
 
             if (item == null)
             {
