@@ -75,12 +75,14 @@ namespace TodoApi.Controllers
 
         // POST: api/todolistitems
         [HttpPost]
-        public async Task<ActionResult<TodoList>> PostTodoListItem(CreateTodoListItem payload)
+        public async Task<ActionResult> PostTodoListItem(CreateTodoListItem payload)
         {
 
             var item = new Item { TodoListId = payload.TodoListId, Body = payload.Body };
-
-            _context.Items.Add(item);
+            if (payload.TodoListId != null &&  payload.Body != null && payload.TodoListId != 0) 
+            {
+                _context.Items.Add(item);
+            }
 
             await _context.SaveChangesAsync();
 
@@ -88,11 +90,11 @@ namespace TodoApi.Controllers
         }
 
         // DELETE: api/todolistitems/5
-        [HttpDelete]
-        public async Task<ActionResult> DeleteTodoListItem(DeleteTodoListItem payload)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteTodoListItem(long id)
         {
 
-            var item = await _context.Items.FindAsync(payload.ItemId);
+            var item = await _context.Items.FindAsync(id);
 
             if (item == null)
             {
