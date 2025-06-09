@@ -8,7 +8,7 @@ Tener instalados:
 - Docker y Docker Compose (instalado y corriendo)
 - Node.js
 - Git
-- @modelcontextprotocol/inspector (npm i @modelcontextprotocol/inspector)
+- @modelcontextprotocol/inspector (`npm i @modelcontextprotocol/inspector`)
 - VS Code
 
 ## Pasos a ejecutar
@@ -35,3 +35,8 @@ Tener instalados:
 
 ![image](https://github.com/user-attachments/assets/f280505b-9633-4cc2-966b-a7b990dfc888)
 
+
+
+## Contacto
+
+Email: brunobic2010@hotmail.com
