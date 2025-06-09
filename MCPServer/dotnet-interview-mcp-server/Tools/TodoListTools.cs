@@ -9,7 +9,7 @@ namespace dotnet_interview_mcp_server.Tools
     public class TodoListTools
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiUrl = "https://localhost:7027/api/";
+        private readonly string _apiUrl = "http://localhost:8080/api/";
         public TodoListTools() 
         {
             _httpClient = new HttpClient();
