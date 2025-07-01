@@ -1,4 +1,4 @@
-# Proyecto MCP Server // Crunchloop Dotnet-interview
+# Proyecto MCP Server 
 
 ## Introducción
 Este proyecto extiende una API y añade un servidor MCP que se comunica con dicha API. La API y la base de datos están contenidas en un archivo docker-compose, mientras que el servidor MCP se inspecciona con la herramienta `@modelcontextprotocol/inspector`.
@@ -36,7 +36,3 @@ Tener instalados:
 ![image](https://github.com/user-attachments/assets/f280505b-9633-4cc2-966b-a7b990dfc888)
 
 
-
-## Contacto
-
-Email: brunobic2010@hotmail.com
